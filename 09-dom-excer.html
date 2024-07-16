@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM EXCERCISE</title>
+  </head>
+  <body>
+    <button onclick>9a</button>
+    <button class="button9b">9b</button>
+    <button
+      class="heads"
+      onclick="
+        document.querySelector('.js-choice')
+        .innerHTML = 'You chose: heads';  
+    "
+    >
+      Heads
+    </button>
+    <button
+      class="tails"
+      onclick="
+        document.querySelector('.js-choice')
+        .innerHTML = 'You chose: tails';
+    "
+    >
+      Tails
+    </button>
+    <p class="js-choice"></p>
+
+    <script>
+      console.log(document.querySelector("button").innerHTML);
+      const bnew = (document.querySelector(".button9b").innerHTML = "9b done!");
+      console.log(bnew);
+    </script>
+  </body>
+</html>

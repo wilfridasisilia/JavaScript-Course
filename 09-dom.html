@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-button">second button</button>
+
+    <script>
+      //document.body.innerHTML = ngambil dan ngubah html dengan js
+
+      /*
+      console.log(document.title);
+      document.title = "change";
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+
+      document.body.innerHTML = "<button>good job</button>";
+      */
+
+      //method = fungsi yang ada didalam object
+
+      //document.query.selector(); = ambil element apapun yang ada dihalaman dan memasukkanya ke js
+      console.log(document.querySelector("button").innerHTML);
+
+      document.querySelector("button").innerHTML = "change";
+
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+      /*
+      document.body.innerHTML = "hello";
+      document.title = "Good Job";
+      */
+    </script>
+  </body>
+</html>

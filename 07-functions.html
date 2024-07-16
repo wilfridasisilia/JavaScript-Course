@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      // function let us reuse code
+      function function1() {
+        console.log("hello");
+        console.log(2 + 2);
+      }
+      function1();
+      */
+
+      //paramaters
+      //Return = gets a value out of a function
+      //paramaters = puts a value into a function
+
+      function calculateTax(cost, tax = 0.1) {
+        console.log(cost * tax);
+      }
+
+      calculateTax(2000, 0.3);
+      calculateTax(5000);
+
+      // 7a
+      function greet(name) {
+        console.log(`hello ${name}.`);
+      }
+      greet("Simon");
+      greet("Eddo");
+      greet("Fatimah");
+      greet("Frida");
+      greet();
+
+      //7d
+      function convertToFahrenheit(celcius) {
+        const formulas = (celcius * 9) / 5 + 32;
+        let result = formulas;
+        console.log(`${celcius} celscius is ${result} Fahrenheit.`);
+        return result;
+      }
+
+      //7e
+      function convertToCelcius(fahrenheit) {
+        const formulas = ((fahrenheit - 32) * 5) / 9;
+        let result = formulas;
+        console.log(`${fahrenheit} fahrenheit is ${result} celcius.`);
+        return result;
+      }
+
+      //7f
+      function convertTemperature(degree, unit) {
+        if (unit === "C") {
+          const result = convertToFahrenheit(degree);
+          return `${result}F`;
+        } else if (unit === "F") {
+          const result = convertToCelcius(degree);
+          return `${result}C`;
+        }
+      }
+      convertTemperature(25, "C");
+      convertTemperature(86, "F");
+    </script>
+  </body>
+</html>
